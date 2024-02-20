@@ -23,6 +23,9 @@ const val SCORE_INCREASE = 20
 val allWords: Set<String> =
     setOf(
         "animal",
+        "alpaca",
+        "lama",
+        "zeeduif",
         "auto",
         "anecdote",
         "alphabet",
