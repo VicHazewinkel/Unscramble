@@ -55,6 +55,11 @@ import androidx.compose.ui.unit.sp
 import com.example.unscramble.R
 import com.example.unscramble.ui.theme.UnscrambleTheme
 
+
+//the GameStatus and GameLayout composable functions,
+//      * game title,
+//      * word count
+//      * the composables for the Submit and Skip buttons.
 @Composable
 fun GameScreen() {
     val mediumPadding = dimensionResource(R.dimen.padding_medium)
@@ -112,6 +117,7 @@ fun GameScreen() {
     }
 }
 
+//displays the game score at the bottom of the screen
 @Composable
 fun GameStatus(score: Int, modifier: Modifier = Modifier) {
     Card(
@@ -124,7 +130,11 @@ fun GameStatus(score: Int, modifier: Modifier = Modifier) {
         )
     }
 }
-
+//displays the main game functionality,
+// which includes the
+//      * scrambled word,
+//      * the game instructions,
+//      * a text field that accepts the user's guesses.
 @Composable
 fun GameLayout(modifier: Modifier = Modifier) {
     val mediumPadding = dimensionResource(R.dimen.padding_medium)
@@ -184,6 +194,9 @@ fun GameLayout(modifier: Modifier = Modifier) {
 /*
  * Creates and shows an AlertDialog with final score.
  */
+
+//displays a dialog–that,
+//user–with options to Play Again or Exit the game
 @Composable
 private fun FinalScoreDialog(
     score: Int,
